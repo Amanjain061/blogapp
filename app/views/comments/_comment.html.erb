@@ -1,0 +1,15 @@
+<% unless comment.archived? %>
+  <p>
+    <strong>Commenter <%= comment.id %>:</strong><br>
+    <%= comment.commenter %>
+  </p>
+  <p>
+    <strong>Comment:</strong>
+    <%= comment.body %>
+  </p>
+  <p>
+      <%= form_with model: comment, url: article_comment_path(comment.article, comment), method: :delete, data: { confirm: "Are you sure?" } do |form| %>
+        <%= form.submit "Destroy comment" %>
+      <% end %>
+    </p>
+<% end %>

@@ -1,0 +1,7 @@
+{
+  "name": "blog",
+  "packageManager": "yarn@4.4.1",
+  "dependencies": {
+    "@hotwired/turbo-rails": "^8.0.12"
+  }
+}
